@@ -1,4 +1,34 @@
 *{
+    outline: 1px solid red;
+}
+header a{
+	color: #FFF;
+}
+nav li a{
+	display: block;
+	padding: 15px 15px;
+	transition: all 0.2s;
+	border-radius: 6px;
+}
+nav li a:hover, nav li a:focus{
+	text-decoration: none;
+	outline: none;
+	background: #FFF;
+}
+
+#main-navigation
+{
+	z-index: 1;
+	position: absolute;
+	right: 10px;
+	margin: 10px 0 0 0;
+}
+#main-navigation ul
+{
+	background: rgba(0,0,0,0.7);
+	list-style: none;
+	padding: 10px;
+	border-radius: 5px;
 }
 .hero{
     background: url(../img/home.jpg)no-repeat;
@@ -6,11 +36,12 @@
     height: 550px;
 }
 header{
-    background-color:#f8f8f8;
+    background-image:url(../img/Fondos-13.gif);
 }
 header h2{
-    font-size: 16px;
+    font-size: 25px;
     margin-top: 12px;
+    font-family: fantasy;
 }
 header nav{
     margin-top: 13px;
@@ -18,29 +49,31 @@ header nav{
 header li a{
     color: black;
     margin-left: 20px;
+    background-color:rgba(238, 130, 238, 0.63);
+    font-family: fantasy;
+    font-size: 18px;
 }
-.hero .caja{
-    width: 660px;
-    text-align: center;
-    position: relative;
-    top: 210px;
-    left: 250px;
-}
+
 .hero h3{
     font-size: 36px;
     color: white;
+    font-family: fantasy;
+}
+.carousel-caption{
+    background-color:#3cbba4;
+    
 }
 .hero p{
     font-size: 14px;
-    color: black;
+    color:white;
 }
 .hero button{
+    background-image: url(../img/azul);
     background-color:#337ab7;
     padding: 7px 17px 7px 17px;
     color: white;
     border-radius: 5px;
 }
-
 .contenido h1{
     text-align: center;
     font-size: 24px;
@@ -71,15 +104,18 @@ header li a{
     margin-top: 30px;
 }
 .relleno button{
-    background-color:#337ab7;
+    background-image: url(../img/azul);
     padding: 10px 20px 10px 20px;
     color: white;
     border-radius: 7px;
     margin-top: 10px;
     font-size: 17px;
-    opacity: .9;
+    margin-bottom: 30px;
 }
-
+.col-md-5{
+    background-image: url(../img/sonrisa);
+    
+}
 .contacto img{
     background-size: cover;
     margin-top: 120px;
@@ -99,17 +135,16 @@ header li a{
 }
 form{
     display:table-caption;
+    background-size: cover;
 }
 .contacto input{
-background-size: cover;
-    width: 360px;
+    background-size: contain;
     margin-top: 20px;
     border-radius: 4px;
-    padding: 5px 0px 2px 7px;
+    padding: 5px 100px 2px 7px;
 }
-.contacto #mensaje{
-    padding-bottom: 120px;
-}
+
+
 .contacto button{
     background-color: #337ab7;
     color: white;
@@ -122,9 +157,8 @@ footer{
     height: 100px;
 }
 footer p{
-    position: relative;
-    top: 50px;
-    left: 100px;
+    margin-left: 30px;
+    padding-top: 20px;
     color: white;
 }
 footer a{
@@ -138,24 +172,23 @@ footer a{
     .container{
         width: 100%;
     }
-    .list-inline{
-        display: none;
-    }
-    .header{
-    width: 100%;
-    }
-    .hero .caja{
-        width: 100%;
-        transform: translateX(-248px);
-    }
    
-
-    .col-md-6, .col-md-4, .col-md-7, col-md-5{
-        width: 100%;
-    }
-    .block-form{
-        margin: 0;
-    }
     
+    .hero .caja{
+    } 
+    
+}
+@media screen and ( max-width:800px){
+     
+    .contacto input{
+        width: auto;
+    }
+}
+@media screen and ( max-width:413px){
+     
+    footer p{
+        position: relative;
+        left: 20px;
+    }
     
 }

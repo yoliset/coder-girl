@@ -6,37 +6,88 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <header>
     <div class="container">
          <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-3 col-sm-12 col-xs-6">
                     <h2>Code Girls</h2>
                 </div>
-            <div class="col-md-4">
-               <nav>
-                  <ul class="list-inline">
-                       <li> <a href="#">Inicio</a></li>
-                       <li><a href="#">Documental</a></li>
-                       <li><a href="#">Hackathon</a></li>
-                       <li><a href="#">Contácto</a></li>
-                   </ul>    
-                </nav>
-            </div> 
-          </div>
+                    <div class="col-md-9 col-sm-12 col-xs-6">
+                         <div class="text-right visible-xs">
+							<button class="btn btn-primary" data-toggle="collapse" data-target="#main-navigation">Menú</button>
+						  </div>
+                          <nav class="hidden-xs">
+							<ul class="desktop-menu list-inline text-right">
+								<li><a href="#">Inicio</a></li>
+								<li><a href="#">Documental</a></li>
+								<li><a href="#">Hackathon</a></li>
+								<li><a href="#">Contacto</a></li>
+							</ul>
+						  </nav>
+					</div>
+				</div>
+
+				<nav class="visible-xs">
+					<div id="main-navigation" class="collapse">
+						<ul  class="mobile-menu text-right">
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Documental</a></li>
+							<li><a href="#">Hackathon</a></li>
+							<li><a href="#">Contacto</a></li>
+						</ul>
+					</div>
+				</nav>
     </div>
 </header>
 	<!-- contenido section -->
 	
 	
   <section class="hero">
-    <div class="container">  
-        <div class="caja">
-              <h3>CHICAS QUE CAMBIAN EL MUNDO </h3>
-              <p>¡Participa en nuestras actividades!</p>
-              <button>Inscribete</button>
-        </div>
+   
+    <div class="container"> 
+    <!-- carousel-->
+      <div id="carousel-1" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+                   <ol class="carousel-indicators">
+                      <li data-target="#Carousel-1" data-slide-to="0" class="active"></li>
+                       <li data-target="#Carousel-1" data-slide-to="1"></li>
+                    </ol>
+
+  <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+          <div class="item active">
+                 <img src="img/mujeres.jpg" class="img-responsive" alt="">
+             <div class="carousel-caption hidden-xs hidden-sm caption-g">
+                <h3>CHICAS QUE CAMBIAN EL MUNDO </h3>
+                <p>¡Participa en nuestras actividades!</p>
+                <button>Inscribete</button>
+              </div>
+           </div>
+
+           <div class="item">
+              <img src="img/mia.jpg" class="img-responsive" alt="">
+           <div class="carousel-caption hidden-xs hidden-sm caption-g">
+                <h3>CHICAS QUE CAMBIAN EL MUNDO </h3>
+                <p>¡Participa en nuestras actividades!</p>
+                <button>Inscribete</button>
+           </div>
+           </div>
+      </div>
+
+  <!-- controls -->
+      <a  href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">  </span>
+          <span class="sr-only">Previous</span>
+       </a>
+       <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+</div>
     </div>
    </section>
    
@@ -64,7 +115,7 @@
    
    
    <section class="relleno">
-       <div class="container">
+       <div class="container-fluid">
            <div class="row">
               <div class="col-md-6">
                   <div>
@@ -84,24 +135,24 @@
    <section class="contacto">
       <div class="container">
           <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-7">
                  <div> 
                   <img src="img/made_with_code.jpg" width="100%">
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                    <h2>CONTACTO</h2>
-                   <h5>Code Girls</h5>
+                   <h5><strong>Code Girls</strong></h5>
                   <ul>
                       <li>795 Folsom Ave, Suite 600</li>
                       <li>San fracisco,CA 94107</li>
                       <li>Fono:(123) 456-7890</li>
                   </ul>
                   <form action "">
-                    <input type="text" id=nombre placeholder="Nombre">
-                    <input type="text" id=email placeholder="Email">
-                    <input type="text" id=Asunto placeholder="Asunto">
-                    <input type="text" id=mensaje placeholder="Mensaje">
+                   <p><input type="text" id=nombre placeholder="Nombre"></p>
+                    <p><input type="text" id=email placeholder="Email"></p>
+                    <p><input type="text" id=Asunto placeholder="Asunto"></p>
+                    <p><textarea placeholder="Mensaje" class="form-control" id="exampleTextarea" rows="5"></textarea></p>
                   </form>
                   <button>Enviar</button>
               </div>
