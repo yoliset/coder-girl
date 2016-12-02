@@ -32,7 +32,7 @@ nav li a:hover, nav li a:focus{
 .hero{
     background: url(../img/home.jpg)no-repeat;
     background-size: cover;
-    height: 550px;
+    height: auto;
 }
 header{
     background-image:url(../img/Fondos-13.gif);
